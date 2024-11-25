@@ -38,9 +38,7 @@ python tools/generate_point_label.py
 python tools/radar_multi_sweeps.py
 ```
 
-## Dataset Preparation
-
-The folder structure after processing should be as below.
+**The folder structure after processing should be as below.**
 
 ```
 mmdetection3d
