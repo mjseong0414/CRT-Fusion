@@ -41,12 +41,11 @@ python tools/swap_ema_and_non_ema.py {phase2_work_dirs}/iter_42192.pth
 ./tools/dist_test.sh configs/crt-fusion/crtfusion-r50-fp16_phase2.py {phase2_work_dirs}/iter_42192_ema.pth 1 --eval bbox
 ```
 
-# Model Zoo
-
-| Backbone | Method | Lr Schd | NDS| mAP| Config | Download |
-| :---: | :---: | :---: | :---: | :---:| :---: | :---: |
-| R50 | RCM-Fusion-R50 | 24ep | 53.5|45.2 |[config](projects/configs/rcmfusion_icra/rcm-fusion_r50.py) |[model](ckpts/rcm-fusion-r50-icra-final.pth)|
-| R101 | RCM-Fusion-R101 | 24ep | 58.7|50.6 |[config](projects/configs/rcmfusion_icra/rcm-fusion_r101.py) |[model](ckpts/rcm-fusion-r101-icra-final.pth)|
+## Model Zoo
+|Method|mAP|NDS|Model|Log
+|-|-|-|-|-|
+|[**R50 CRT-Fusion**](configs/crt-fusion/crtfusion-r50-fp16_phase2.py)|50.0|57.2|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-shortonly-fp16_ema.pth)|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-shortonly-fp16.log)
+|[**R50 CRT-Fusion-light-cbgs**](configs/crt-fusion/crtfusion-r50-fp16_phase2_light_cbgs.py)|48.8|57.8|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-longonly-fp16_phase2_ema.pth)|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-longonly-fp16_phase2.log)
 
 
 ## Acknowledgements
