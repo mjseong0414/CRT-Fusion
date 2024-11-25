@@ -17,7 +17,7 @@ Accurate and robust 3D object detection is a critical component in autonomous ve
 
 
 # Methods
-![method](.figs/CRT-Fusion_overall.png "model arch")
+![method](./figs/CRT-Fusion_overall.png "model arch")
 
 
 # Getting Started
