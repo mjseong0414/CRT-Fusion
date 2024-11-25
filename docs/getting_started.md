@@ -45,7 +45,6 @@ mmdetection3d
 ├── data
 │   ├── nuscenes
 │   │   ├── crtfusion_radar_ms
-│   │   ├── depth_gt
 │   │   ├── lidarseg
 │   │   ├── maps
 │   │   ├── points_seg
