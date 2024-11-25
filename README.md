@@ -4,10 +4,14 @@
 </div>
 
 <div align="center">
-  <a href="https://youtube.com/shorts/BvfSRl9MKnw" target="_blank">
-    <img src="https://img.youtube.com/vi/BvfSRl9MKnw/0.jpg" alt="crt-fusion_demo" width="640"/>
-  </a>
-  <p><b>Figure 1:</b> CRT-Fusion Demo Video</p>
+  <iframe 
+    width="640" 
+    height="360" 
+    src="https://www.youtube.com/embed/BvfSRl9MKnw?autoplay=1" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+  </iframe>
 </div>
 
 > **CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection**, NeurIPS 2024
