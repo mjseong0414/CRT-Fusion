@@ -1,6 +1,7 @@
 <div align="center">   
   
-# CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection, NeurIPS 2024
+# CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection, 
+# NeurIPS 2024
 </div>
 
 > - [Paper in arXiv](https://arxiv.org/pdf/2411.03013)
