@@ -37,3 +37,25 @@ python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./dat
 python tools/generate_point_label.py
 python tools/radar_multi_sweeps.py
 ```
+
+## Dataset Preparation
+
+The folder structure after processing should be as below.
+
+```
+mmdetection3d
+├── data
+│   ├── nuscenes
+│   │   ├── crtfusion_radar_ms
+│   │   ├── depth_gt
+│   │   ├── lidarseg
+│   │   ├── maps
+│   │   ├── points_seg
+│   │   ├── samples
+│   │   ├── samples_point_label
+│   │   ├── sweeps
+│   │   ├── v1.0-test
+│   │   ├── v1.0-trainval
+│   │   ├── nuscenes_infos_crtfusion_train.pkl
+│   │   ├── nuscenes_infos_crtfusion_val.pkl
+│   │   ├── nuscenes_infos_crtfusion_test.pkl
