@@ -1,4 +1,5 @@
-Modified from BEVDet [getting_started.md](https://github.com/HuangJunJie2017/BEVDet/blob/master/docs/getting_started.md)
+Modified from SOLOFusion [getting_started.md] https://github.com/Divadi/SOLOFusion/blob/main/docs/getting_started.md
+
 
 # Prerequisites
 Our code is tested on the following environment:
@@ -11,7 +12,6 @@ Our code is tested on the following environment:
 - MMDetection==2.14.0
 - MMSegmentation==0.14.1
 - MMDetection3d==0.17.2
-
 
 # Installation
 Please reference BEVDet's environment creation. A from-scratch script is as follows:
@@ -26,13 +26,14 @@ pip install -r requirements.txt
 pip install -v -e .
 pip install pillow==8.4.0 # Important! https://github.com/mit-han-lab/bevfusion/issues/63
 pip install setuptools==59.5.0 # If you run into AttributeError: module 'distutils' has no attribute 'version'
+pip install torch-scatter
 ```
-
 # Data Preparation
 
 **a. Please refer to [nuScenes](datasets/nuscenes_det.md) for initial preparation.**
 
 ```shell
 python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes
+python tools/generate_point_label.py
+python tools/radar_multi_sweeps.py
 ```
-Note that L75-L82 in `tools/create_data.py` can be skipped; just generating nuscenes_infos_train.pkl & nuscenes_infos_val.pkl is enough
