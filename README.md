@@ -1,10 +1,8 @@
 <div align="center">   
   
-# CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection
+# CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection, NeurIPS 2024
 </div>
 
-
-> **CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection**, NeurIPS 2024
 > - [Paper in arXiv](https://arxiv.org/pdf/2411.03013)
 > Jisong Kim*, Minjae Seong*, Jun Won Choi**
 
