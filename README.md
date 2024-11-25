@@ -18,7 +18,7 @@ Accurate and robust 3D object detection is a critical component in autonomous ve
 
 # Methods
 ![method](./figs/CRT-Fusion_overall.png "model arch")
-Overall architecture of CRT-Fusion: Features are extracted from radar and camera data using backbone networks at each timestamp. The MVF module combines these features to generate fused BEV feature maps. The MFE module predicts the location and velocity of dynamic objects from these maps. The MGTF module then uses the predicted motion information to create the final feature map for the current timestamp, which is fed into the 3D detection head.
+**Overall architecture of CRT-Fusion**: Features are extracted from radar and camera data using backbone networks at each timestamp. The MVF module combines these features to generate fused BEV feature maps. The MFE module predicts the location and velocity of dynamic objects from these maps. The MGTF module then uses the predicted motion information to create the final feature map for the current timestamp, which is fed into the 3D detection head.
 
 
 # Getting Started
