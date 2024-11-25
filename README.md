@@ -51,7 +51,6 @@ python tools/swap_ema_and_non_ema.py {phase2_work_dirs}/iter_42192.pth
 ## Acknowledgements
 We thank numerous excellent works and open-source codebases:
 - [MMDetection3D](https://github.com/open-mmlab/mmdetection3d)
-- [BEVDet](https://github.com/HuangJunJie2017/BEVDet)
 - [BEVDepth](https://github.com/Megvii-BaseDetection/BEVDepth)
 - [SOLOFusion](https://github.com/Divadi/SOLOFusion)
 - [RCM-Fusion](https://github.com/mjseong0414/RCM-Fusion)
