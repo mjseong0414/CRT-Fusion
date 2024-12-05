@@ -44,8 +44,8 @@ We further optimized our models, which resulted in a slight difference compared 
 
 |Method|mAP|NDS|Model
 |-|-|-|-|
-|[**R50 CRT-Fusion**](configs/crt-fusion/crtfusion-r50-fp16_phase2.py)|50.0|57.2|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-shortonly-fp16_ema.pth)
-|[**R50 CRT-Fusion-light-cbgs**](configs/crt-fusion/crtfusion-r50-fp16_phase2_light_cbgs.py)|48.8|57.8|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-longonly-fp16_phase2_ema.pth)
+|[**R50 CRT-Fusion**](configs/crt-fusion/crtfusion-r50-fp16_phase2.py)|49.3|57.9|[Link](https://github.com/mjseong0414/CRT-Fusion/releases/download/v0.0.0/crt-fusion-r50-42192_ema.pth)
+|[**R50 CRT-Fusion-light-cbgs**](configs/crt-fusion/crtfusion-r50-fp16_phase2_light_cbgs.py)|48.9|58.7|[Link](https://github.com/mjseong0414/CRT-Fusion/releases/download/v0.0.0/crt-fusion-r50-light-cbgs-160100_ema.pth)
 
 
 ## Acknowledgements
