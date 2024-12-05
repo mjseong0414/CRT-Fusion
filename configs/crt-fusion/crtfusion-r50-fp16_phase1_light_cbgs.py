@@ -3,7 +3,7 @@ _base_ = ['../_base_/datasets/nus-3d.py',
           '../_base_/default_runtime.py']
 
 work_dir = None
-load_from = None
+load_from = './ckpts/depth_pretrain_crt-fusion-light.pth'
 resume_from = None
 resume_optimizer = False
 find_unused_parameters = False
@@ -322,8 +322,7 @@ data = dict(
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file=data_root + 'nuscenes_infos_crtfusion_train_allradarfeat.pkl',
-        # ann_file=data_root + 'nuscenes_infos_crtfusion_train.pkl',
+        ann_file=data_root + 'nuscenes_infos_crtfusion_train.pkl',
         pipeline=train_pipeline,
         classes=class_names,
         test_mode=False,
@@ -344,16 +343,14 @@ data = dict(
         point_seg=True),
     val=dict(pipeline=test_pipeline, 
              classes=class_names,
-             ann_file=data_root + 'nuscenes_infos_crtfusion_val_allradarfeat.pkl',
-            # ann_file=data_root + 'nuscenes_infos_crtfusion_val.pkl',
+            ann_file=data_root + 'nuscenes_infos_crtfusion_val.pkl',
              modality=input_modality, 
              img_info_prototype='bevdet',
              use_sequence_group_flag=True,
              sequences_split_num=test_sequences_split_num),
     test=dict(pipeline=test_pipeline, 
               classes=class_names,
-              ann_file=data_root + 'nuscenes_infos_crtfusion_val_allradarfeat.pkl',
-            # ann_file=data_root + 'nuscenes_infos_crtfusion_val.pkl',
+            ann_file=data_root + 'nuscenes_infos_crtfusion_val.pkl',
               modality=input_modality,
               img_info_prototype='bevdet',
               use_sequence_group_flag=True,

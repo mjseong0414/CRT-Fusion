@@ -462,7 +462,6 @@ class LoadMultiViewImageFromFiles_CRTFusion(object):
         post_rot = A.matmul(post_rot)
         post_tran = A.matmul(post_tran) + b
 
-        # rcst_mat
         resize_mat = np.eye(4)
         flip_mat = np.eye(4)
         rot_mat1 = np.eye(4)
@@ -655,8 +654,6 @@ class LoadMultiViewImageFromFiles_CRTFusion(object):
         gt_depth = []
         gt_semantic = []
         cams = self.choose_cams()
-        # cams = ['CAM_FRONT_LEFT', 'CAM_FRONT', 'CAM_FRONT_RIGHT', 'CAM_BACK_LEFT', 'CAM_BACK', 'CAM_BACK_RIGHT']
-        # print(cams)
         for cam in cams:
             cam_data = results['img_info'][cam]
             filename = cam_data['data_path']
@@ -702,11 +699,6 @@ class LoadMultiViewImageFromFiles_CRTFusion(object):
             post_rot[:2, :2] = post_rot2
             
             imgs.append(self.normalize_img(img))
-            # if cam == 'CAM_FRONT':
-            #     cv2.imwrite(f'./visualize/{cam}.png',np.array(img)[:, :, ::-1])
-            #     cv2.imwrite(f'./proj_test/cam_front/{cam}_{self.iter}.png',np.array(img)[:, :, ::-1])
-            #     self.iter+=1
-            # cv2.imwrite(f'./proj_test/{cam}.png',np.array(img)[:, :, ::-1])
             
             # obtain lidar to image transformation matrix
             cam_trans = cam_data['sensor2lidar_translation']
@@ -770,7 +762,6 @@ class LoadMultiViewImageFromFiles_CRTFusion(object):
                         l2e_r_mat = Quaternion(l2e_r).rotation_matrix
                         e2g_r_mat = Quaternion(e2g_r).rotation_matrix
 
-                        # shift_global = np.array([*shift_global[:2], 0.0])
                         shift_lidar = shift_global @ np.linalg.inv(e2g_r_mat).T @ np.linalg.inv(
                             l2e_r_mat).T
                         trans.extend([tran + shift_lidar for tran in trans])
@@ -1685,7 +1676,7 @@ class LoadRadarPointsFromSampleSweeps(object):
                     cloud arrays.
         """
         
-        points = np.load('./data/nuscenes/crtfusion_radar_ms_sweeps_allfeat/' + results['radar_sweeps'][0].split('/')[-1].replace('RADAR_FRONT', 'RADAR').split('.')[0] + '.npy')
+        points = np.load('./data/nuscenes/crtfusion_radar_ms/' + results['radar_sweeps'][0].split('/')[-1].replace('RADAR_FRONT', 'RADAR').split('.')[0] + '.npy')
         
         # radar_sweep_drop
         if self.rda_aug_conf is not None:

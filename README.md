@@ -21,7 +21,7 @@ Accurate and robust 3D object detection is a critical component in autonomous ve
 Please see [getting_started.md](docs/getting_started.md)
 
 
-## Training
+## Training (R50 CRT-Fusion)
 **Phase 1:**
 ```shell
 ./tools/dist_train.sh configs/crt-fusion/crtfusion-r50-fp16_phase1.py 4 --gpus 4 --work-dir {phase1_work_dirs} --no-validate
@@ -33,13 +33,15 @@ python tools/swap_ema_and_non_ema.py {phase1_work_dirs}/iter_10548.pth
 python tools/swap_ema_and_non_ema.py {phase2_work_dirs}/iter_42192.pth
 ```
 
-## Inference
+## Inference (R50 CRT-Fusion)
 **Run the following commands:**
 ```shell
 ./tools/dist_test.sh configs/crt-fusion/crtfusion-r50-fp16_phase2.py {phase2_work_dirs}/iter_42192_ema.pth 1 --eval bbox
 ```
 
 ## Model Zoo
+We further optimized our models, which resulted in a slight difference compared to the performance reported in the paper.
+
 |Method|mAP|NDS|Model|Log
 |-|-|-|-|-|
 |[**R50 CRT-Fusion**](configs/crt-fusion/crtfusion-r50-fp16_phase2.py)|50.0|57.2|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-shortonly-fp16_ema.pth)|[Link](https://github.com/Divadi/SOLOFusion/releases/download/v0.1.0/r50-shortonly-fp16.log)

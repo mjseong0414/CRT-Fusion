@@ -136,7 +136,7 @@ class CRTFusion(BEVDet):
                         stride=1),
                 nn.BatchNorm2d(history_cat_conv_out_channels),
                 nn.ReLU(inplace=True))
-
+            
             self.history_sweep_time = None
             self.history_seq_ids = None
             self.history_forward_augs = None
@@ -345,7 +345,7 @@ class CRTFusion(BEVDet):
         self.his_occ_feat = self.his_occ_feat.detach()
         if curr_motion is not None:
             self.his_motion = self.his_motion.detach()
-        # 각 배치별 True의 개수 계산
+        
         true_counts = self.his_occ_mask.sum(dim=(1, 2))
         for batch_idx in range(B):
             if start_of_sequence[batch_idx]:
@@ -358,7 +358,6 @@ class CRTFusion(BEVDet):
                 # Repeat the features and grid indices according to your requirement
                 repeated_occ_bev_feat = batch_occ_bev_feat.repeat(1, self.history_cat_num)
                 
-                # 해당 배치의 데이터 삭제 및 삽입
                 start = sum(true_counts[:batch_idx])
                 end = start + true_counts[batch_idx]
 

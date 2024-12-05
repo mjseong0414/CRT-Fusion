@@ -10,16 +10,28 @@ class RadarCameraGating(nn.Module):
         self.cam_linear = nn.Sequential(
             nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
             nn.BatchNorm2d(channel_c),
+            nn.ReLU(),
+            nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
+            nn.BatchNorm2d(channel_c),
             nn.ReLU())
         self.pts_linear = nn.Sequential(
             nn.Conv2d(channel_r, channel_c, kernel_size=3, padding=1),
+            nn.BatchNorm2d(channel_c),
+            nn.ReLU(),
+            nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
             nn.BatchNorm2d(channel_c),
             nn.ReLU())
         self.cam_atten_weight = nn.Sequential(
             nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
             nn.BatchNorm2d(channel_c),
+            nn.ReLU(),
+            nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
+            nn.BatchNorm2d(channel_c),
             nn.ReLU())
         self.rad_atten_weight = nn.Sequential(
+            nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
+            nn.BatchNorm2d(channel_c),
+            nn.ReLU(),
             nn.Conv2d(channel_c, channel_c, kernel_size=3, padding=1),
             nn.BatchNorm2d(channel_c),
             nn.ReLU())
