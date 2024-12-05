@@ -56,6 +56,7 @@ mmdetection3d
 │   │   ├── nuscenes_infos_crtfusion_train.pkl
 │   │   ├── nuscenes_infos_crtfusion_val.pkl
 │   │   ├── nuscenes_infos_crtfusion_test.pkl
+```
 
 **b. Pretrained model weights.**
 ```shell
