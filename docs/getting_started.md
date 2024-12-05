@@ -56,3 +56,11 @@ mmdetection3d
 │   │   ├── nuscenes_infos_crtfusion_train.pkl
 │   │   ├── nuscenes_infos_crtfusion_val.pkl
 │   │   ├── nuscenes_infos_crtfusion_test.pkl
+
+**b. Pretrained model weights.**
+```shell
+mkdir ckpts
+cd ./ckpts
+wget https://github.com/mjseong0414/CRT-Fusion/releases/download/v0.0.0/depth_pretrain_crt-fusion.pth
+wget https://github.com/mjseong0414/CRT-Fusion/releases/download/v0.0.0/depth_pretrain_crt-fusion-light.pth
+```
